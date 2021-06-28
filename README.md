@@ -2,7 +2,6 @@
 
 Additional User details, for use with makepkg etc. :
   * Username: 'builder'
-  * Password: '123'
 
 Additional Packages: git, cmake, meson, [yay](https://github.com/Jguer/yay)
 
