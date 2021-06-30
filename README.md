@@ -15,9 +15,14 @@ Most basic usage is:
 docker run -it devel-arch
 ```
 
-It provides you with a bash shell to type in commands too
+It provides you access to the bash shell to type in commands
 
 > If you want a scripted workflow, replace the CMD with a ENTRYPOINT statement in the Dockerfile
+
+## Customisations
+
+* The `zsh` branch uses zsh as default shell, with oh-my-zsh included
+* The `custom` branch are my own custom additions, if any
 
 > The Dockerfile is quite short, modify it to your liking :)
 
