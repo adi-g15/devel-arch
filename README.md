@@ -1,9 +1,11 @@
 # Dockerfile based on archlinux:base-devel
 
+This one uses zsh as the default shell
+
 Additional User details, for use with makepkg etc. :
   * Username: 'builder'
 
-Additional Packages: git, cmake, meson, [yay](https://github.com/Jguer/yay)
+Additional Packages: git, cmake, meson, wget, [yay](https://github.com/Jguer/yay)
 
 Provides you with an arch system, intentionally not using an ENTRYPOINT for now :)
 
@@ -15,7 +17,7 @@ Most basic usage is:
 docker run -it devel-arch
 ```
 
-It provides you access to the bash shell to type in commands
+It provides you access to the zsh shell to type in commands
 
 > If you want a scripted workflow, replace the CMD with a ENTRYPOINT statement in the Dockerfile
 
