@@ -27,6 +27,10 @@ RUN su $USERNAME -c 'sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh
 RUN chsh -s /bin/zsh root
 RUN chsh -s /bin/zsh $USERNAME
 
+# Add neovim
+RUN pacman -S --noconfirm --needed neovim
+RUN ln -sf nvim /usr/bin/vim
+
 WORKDIR /
 CMD /bin/zsh
 
