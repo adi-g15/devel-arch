@@ -18,6 +18,7 @@ RUN git clone https://aur.archlinux.org/yay-bin.git --depth=1
 RUN chown $USERNAME -R yay-bin
 WORKDIR yay-bin
 RUN sudo -u $USERNAME makepkg --noconfirm --syncdeps --install
+RUN rm -rf /tmp/yay-bin
 
 # Add zsh and oh-my-zsh
 RUN pacman -S --noconfirm --needed zsh
