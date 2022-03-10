@@ -19,6 +19,9 @@ RUN chown $USERNAME -R yay-bin
 WORKDIR yay-bin
 RUN sudo -u $USERNAME makepkg --noconfirm --syncdeps --install
 
+# Remove downloaded packages
+RUN pacman -Scc --noconfirm
+
 WORKDIR /
 CMD /bin/bash
 
