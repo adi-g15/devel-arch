@@ -32,6 +32,9 @@ RUN chsh -s /bin/zsh $USERNAME
 RUN pacman -S --noconfirm --needed neovim
 RUN ln -sf nvim /usr/bin/vim
 
+# Remove downloaded packages
+RUN pacman -Sc --noconfirm
+
 WORKDIR /
 CMD /bin/zsh
 
